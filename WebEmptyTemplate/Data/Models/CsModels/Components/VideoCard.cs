@@ -1,8 +1,10 @@
 ﻿namespace WebEmptyTemplate.Data.Models.CsModels.Components
 {
+
     /// <summary>
     /// Видео карта.
     /// </summary>
+    [Serializable]
     public class VideoCard : Part
     {
         #region Interface
@@ -52,5 +54,10 @@
         /// </summary>
         public string OpenGL { get; set; }
         #endregion //End 3D API
+
+        public VideoCard()
+        {
+
+        }
     }
 }

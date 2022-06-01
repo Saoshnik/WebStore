@@ -5,10 +5,11 @@ namespace WebEmptyTemplate.Data.DataBase
 {
     public static class DbManager
     {
-        private static string _MOTHERBOARDS_PATH { get; } = $"Xml/Motherboards.xml";
-        private static string _PROCESSORS_PATH { get; } = $"Xml/Processors.xml";
-        private static string _RAMs_PATH { get; } = $"Xml/RAMs.xml";
-        private static string _VIDEOCARDS_PATH { get; } = $"Xml/VideoCards.xml";
+        /* bin/Debug/net6.0/ */
+        public static string MOTHERBOARDS_PATH { get; } = $"bin/Debug/net6.0/DataBase/Xml/Motherboards.xml";
+        public static string PROCESSORS_PATH { get; } = $"bin/Debug/net6.0/DataBase/Xml/Processors.xml";
+        public static string RAMs_PATH { get; } = $"bin/Debug/net6.0/DataBase/Xml/RAMs.xml";
+        public static string VIDEOCARDS_PATH { get; } = $"bin/Debug/net6.0/DataBase/Xml/VideoCards.xml";
 
         public static List<Motherboard> Motherboards { get; set; }
         public static List<Processor> Processors { get; set; }
@@ -17,23 +18,28 @@ namespace WebEmptyTemplate.Data.DataBase
 
         public static List<Part> Parts { get; set; } = new List<Part>();
 
-        /*static DbManager()
+        public static void Nothing()
+        {
+            var val = 0;
+        }
+
+        static DbManager()
         {
             List<Motherboard> motherboards = new();
             List<Processor> processors = new();
             List<RAM> rams = new();
             List<VideoCard> videocards = new();
 
-            Serializer.Deserialize(_MOTHERBOARDS_PATH, ref motherboards);
-            Serializer.Deserialize(_PROCESSORS_PATH, ref processors);
-            Serializer.Deserialize(_RAMs_PATH, ref rams);
-            Serializer.Deserialize(_VIDEOCARDS_PATH, ref videocards);
+            Serializer.Deserialize(MOTHERBOARDS_PATH, ref motherboards);
+            Serializer.Deserialize(PROCESSORS_PATH, ref processors);
+            Serializer.Deserialize(RAMs_PATH, ref rams);
+            Serializer.Deserialize(VIDEOCARDS_PATH, ref videocards);
 
 
-            *//* we can include some validation logic here -> *//*
+            /* we can include some validation logic here-> */
 
 
-            Motherboards = motherboards;
+           Motherboards = motherboards;
             Processors = processors;
             RAMs = rams;
             VideoCards = videocards;
@@ -42,6 +48,6 @@ namespace WebEmptyTemplate.Data.DataBase
             Parts.AddRange(Processors);
             Parts.AddRange(RAMs);
             Parts.AddRange(VideoCards);
-        }*/
+        }
     }
 }

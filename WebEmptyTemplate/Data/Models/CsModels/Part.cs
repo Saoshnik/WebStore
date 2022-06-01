@@ -1,5 +1,6 @@
 ﻿namespace WebEmptyTemplate.Data.Models.CsModels
 {
+    [Serializable]
     public class Part
     {
         /// <summary>
@@ -26,5 +27,10 @@
         /// Цена продукта.
         /// </summary>
         public double Cost { get; set; }
+
+        public Part()
+        {
+
+        }
     }
 }

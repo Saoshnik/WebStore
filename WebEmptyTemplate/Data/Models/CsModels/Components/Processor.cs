@@ -3,6 +3,7 @@
     /// <summary>
     /// Процессор.
     /// </summary>
+    [Serializable]
     public class Processor : Part
     {
         /// <summary>
@@ -19,15 +20,9 @@
         /// </summary>
         public int NumberOfCores { get; set; }
         /// <summary>
-        /// Количество потоков.
-        /// </summary>
-        public int NumberOfThreads { get; set; }
-        /// <summary>
         /// Тактовая частота, MHz.
         /// </summary>
         public int ClockSpeed { get; set; }
-
-
         /// <summary>
         /// Размер кэша первого уровня, KB.
         /// </summary>
@@ -59,10 +54,6 @@
         /// </summary>
         public int ManufacturingTech { get; set; }
         /// <summary>
-        /// Максимальная температура.
-        /// </summary>
-        public int MaxTemperature { get; set; }
-        /// <summary>
         /// Максимальное энергопотребление, Вт.
         /// </summary>
         public int MaxTDP { get; set; }
@@ -70,5 +61,10 @@
         /// Система охлаждения.
         /// </summary>
         public string CoolingDevice { get; set; }
+
+        public Processor()
+        {
+
+        }
     }
 }

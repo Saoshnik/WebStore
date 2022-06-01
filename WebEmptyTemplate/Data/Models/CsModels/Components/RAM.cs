@@ -3,6 +3,7 @@
     /// <summary>
     /// Оперативная память.
     /// </summary>
+    [Serializable]
     public class RAM : Part
     {
         /// <summary>
@@ -25,5 +26,10 @@
         /// Напряжение питания.
         /// </summary>
         public double Voltage { get; set; }
+
+        public RAM()
+        {
+
+        }
     }
 }
